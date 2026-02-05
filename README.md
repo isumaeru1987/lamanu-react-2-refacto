@@ -50,7 +50,15 @@ src/components/UserItem.jsx    // affichage d’un utilisateur
 
 ---
 
-## 5) (Bonus) Rendre le composant plus réutilisable
+## 5) Ajouter une navigation
+
+- Créer une page "/" de présentation (Bienvenue)
+- Créer une page "/users"
+
+---
+
+## 6) (Bonus) Rendre le composant plus réutilisable
 
 - UserList accepte une liste de users déjà filtrée
 - Ajouter un composant SearchBar optionnel
+- Ajouter une page dynamique pour accéder à un utilisateur
