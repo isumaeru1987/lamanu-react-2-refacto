@@ -1,0 +1,76 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 30px;              /* espace entre les cartes */
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;        /* responsive */
+}
+
+.likes {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.likes.low {
+  color: #2ecc71;
+}
+
+.likes.medium {
+  color: #f39c12;
+}
+
+.likes.max {
+  color: #e74c3c;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.reset {
+  background: #ddd;
+}
