@@ -18,6 +18,7 @@
   width: 260px;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .card img {
@@ -73,4 +74,8 @@ button:disabled {
 
 button.reset {
   background: #ddd;
+}
+
+.selected {
+  background-color: #2ecc71;
 }
