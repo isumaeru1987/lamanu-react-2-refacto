@@ -36,6 +36,13 @@ function UserPage() {
                                 </div>
 
                                 <div className="user-info-item">
+                                    <span className="user-info-label">Adresse :</span>
+                                    <span className="user-info-value">
+                                        {user?.address?.street}, {user?.address?.suite}, {user?.address?.city} {user?.address?.zipcode}
+                                    </span>
+                                </div>
+
+                                <div className="user-info-item">
                                     <span className="user-info-label">Email :</span>
                                     <span className="user-info-value">
                                         <a href={`mailto:${user.email}`}>{user.email}</a>
