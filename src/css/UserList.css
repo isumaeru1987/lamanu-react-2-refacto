@@ -1,0 +1,59 @@
+.user-list-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: system-ui, sans-serif;
+}
+
+.user-list-container.selected-view {
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.back-btn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-list-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-list-item {
+    cursor: pointer;
+    background-color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-delete-btn {
+    margin-left: 8px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
