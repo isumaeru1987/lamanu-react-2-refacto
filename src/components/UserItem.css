@@ -1,0 +1,93 @@
+.user-item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.user-item-wrapper:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: #d0d0d0;
+}
+
+.user-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.user-item.selected .user-info {
+  font-weight: 600;
+  color: #4a90e2;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.user-email {
+  color: #666;
+}
+
+.delete-button {
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.delete-button:hover {
+  background: #fee;
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.delete-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.details-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: #4a90e2;
+  text-decoration: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.details-link:hover {
+  background: #f0f7ff;
+  border-color: #4a90e2;
+}
+
+.details-link svg {
+  width: 18px;
+  height: 18px;
+}
