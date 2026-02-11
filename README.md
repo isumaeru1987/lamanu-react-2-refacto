@@ -1,64 +1,71 @@
-# 🟢 À FAIRE — Tâches de refactoring
+# 🧾 Grille de notation — TP React : Écran "Collection"
 
-## 1) Corriger l’appel API (useEffect)
+## 🎯 Objectif
 
-- Ajouter un tableau de dépendances []
-- Ajouter les états loading et error
+Refactoriser l’application existante en appliquant :
 
-### ✅ Attendu
-- Affichage de “Chargement…” pendant la requête
-- Affichage d’un message d’erreur si la requête échoue
-
----
-
-## 2) Extraire l’appel API dans un service
-
-Créer le fichier suivant :
-src/services/userService.js
-
-### ✅ Attendu
-- getUsers() retourne la liste des utilisateurs
-- Gestion des erreurs via throw
+- Les Hooks correctement (`useEffect`, `useState`)
+- La séparation des responsabilités
+- Les bonnes pratiques React
+- La mise en place du routing
 
 ---
 
-## 3) Séparer Page / UI
+## 1️⃣ Corriger l’appel API (useEffect) — **4/4**
 
-Créer les fichiers suivants :
-
-src/pages/UsersPage.jsx        // logique : state, fetch, handlers  
-src/components/UserList.jsx    // affichage de la liste  
-src/components/UserItem.jsx    // affichage d’un utilisateur  
-
-### ✅ Attendu
-- UserItem reçoit les props :
-  - user
-  - selected
-  - onSelect
-  - onDelete
-- Aucun appel API dans le dossier components/
+- **1/1** Présence correcte du tableau de dépendances `[]`
+- **1/1** Ajout de l’état `loading`
+- **1/1** Ajout de l’état `error`
+- **1/1** Affichage conditionnel :
+  - “Chargement…” pendant la requête
+  - Message d’erreur si la requête échoue
 
 ---
 
-## 4) Corriger les anti-patterns
+## 2️⃣ Extraire l’appel API dans un service — **3/3**
 
-- Remplacer key={index} par key={user.id}
-- Supprimer un utilisateur sans muter le state :
-  setUsers(prev => prev.filter(...))
-- Déplacer la logique “ville sélectionnée” hors du JSX :
-  const city = selected?.address?.city ?? "none"
+- **1/1** Création du fichier `src/services/userService.js`
+- **1/1** Fonction `getUsers()` correctement exportée et utilisée
+- **1/1** Gestion des erreurs avec `throw`
 
 ---
 
-## 5) Ajouter une navigation
+## 3️⃣ Séparer Page / UI — **5/5**
 
-- Créer une page "/" de présentation (Bienvenue)
-- Créer une page "/users"
+### Structure — 2/2
+
+- **1/1** `UsersPage.jsx` contient la logique (state, fetch, handlers)
+- **1/1** `UserList.jsx` et `UserItem.jsx` contiennent uniquement l’affichage
+
+### Props — 0/2
+
+`UserItem` reçoit correctement les props suivantes :
+- `user`
+- `selected`
+- `onSelect`
+- `onDelete`
+
+### Bonne pratique — 1/1
+
+- Aucun appel API dans le dossier `components/`
 
 ---
 
-## 6) (Bonus) Rendre le composant plus réutilisable
+## 4️⃣ Correction des anti-patterns — **4/4**
+- **1/1** Remplacement de `key={index}` par `key={user.id}`
+- **1/1** Suppression d’un utilisateur sans mutation
+- **1/1** Déplacement de la logique hors JSX
+- **1/1** Code simplifié et plus lisible (suppression duplications)
 
-- UserList accepte une liste de users déjà filtrée
-- Ajouter un composant SearchBar optionnel
-- Ajouter une page dynamique pour accéder à un utilisateur
+---
+
+## 5️⃣ Ajouter une navigation (React Router) — **4/4**
+- **1/1** Installation et configuration correcte de React Router
+- **1/1** Page "/" (Bienvenue) fonctionnelle
+- **1/1** Page "/users" fonctionnelle
+- **1/1** Navigation fluide sans rechargement
+
+---
+
+## 🧮 Barème
+- **Note finale : 18/20**
