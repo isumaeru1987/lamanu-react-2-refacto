@@ -10,21 +10,25 @@ import '../css/UsersPage.css';
 /** Components */
 import SearchBar from "../components/ui/SearchBar";
 import UserList from "../components/UserList";
+import UserItemSkeleton from "../skeleton/UserItemSkeleton";
 
 export const UsersPage = () => {
-    const { loading, users, query, onDelete } = useContext(UserContext);
+    const { loading } = useContext(UserContext);
 
     return (
         <div className="users-page">
             <h1>Liste des utilisateurs</h1>
+            <SearchBar />
             {
-                loading ? 
-                    <p>Chargement des utilisateurs...</p>
-                :
-                <div>
-                    <SearchBar />
-                    <UserList />
-                </div>
+                loading ?
+                    <div className="loading">
+                        <p>Chargement des utilisateurs...</p>
+                        <UserItemSkeleton />
+                    </div>
+                    :
+                    <div>
+                        <UserList />
+                    </div>
             }
         </div>
     )

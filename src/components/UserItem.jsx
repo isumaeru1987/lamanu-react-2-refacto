@@ -5,18 +5,23 @@ import '../css/UserItem.css';
 import { Link } from 'react-router';
 
 /** Icon */
-import { VscTrash } from "react-icons/vsc";
+import { VscLinkExternal, VscTrash } from "react-icons/vsc";
+import { GrCheckboxSelected, GrCheckbox } from "react-icons/gr";
 
 export const UserItem = ({ user, loading, selected, setSelected, onDelete }) => {
     const handleDelete = () => {
         onDelete(user.id);
     };
 
+    const handleSelect = () => {
+        setSelected(user);
+    };
+
     return (
         <div className="user-container">
             {
                 loading ?
-                    <p>Chargement de l'utilisateur...</p>
+                    <p className="loading">Chargement de l'utilisateur...</p>
                     :
                     <div className="user-card">
                         <div className="user-card-header">
@@ -40,15 +45,18 @@ export const UserItem = ({ user, loading, selected, setSelected, onDelete }) => 
                             <div className="social-links">
                                 <a href={`mailto:${user.email}`} className="social-btn">Email</a>
                                 <a href={`tel:${user.phone}`} className="social-btn">Téléphone</a>
-                                <a href={user.website} className="social-btn">Site Web</a>
+                                <a href={user.website} className="social-btn">Web</a>
                             </div>
 
                             <div className="user-btn">
                                 <Link to={`/users/${user.id}`} className="follow-btn" onClick={() => setSelected(user)}>
-                                    Voir les détails
+                                    <VscLinkExternal />
                                 </Link>
                                 <button className='follow-btn' onClick={handleDelete}>
                                     <VscTrash />
+                                </button>
+                                <button className='follow-btn' onClick={handleSelect}>
+                                    { selected && selected.id === user.id ? <GrCheckboxSelected /> : <GrCheckbox /> } 
                                 </button>
                             </div>
                         </div>
