@@ -29,10 +29,10 @@
 
 .cards-container {
   display: flex;
-  gap: 30px;              /* espace entre les cartes */
+  gap: 30px; /* espace entre les cartes */
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;        /* responsive */
+  flex-wrap: wrap; /* responsive */
 }
 
 .likes {
@@ -73,4 +73,38 @@ button:disabled {
 
 button.reset {
   background: #ddd;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar .item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .item a:hover {
+  background-color: #555;
+}
+
+.navbar .item a.active {
+  background-color: #007bff;
+  color: #fff;
 }
